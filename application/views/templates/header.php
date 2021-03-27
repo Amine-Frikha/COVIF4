@@ -42,6 +42,11 @@
         <a href="#" class="nav-link">Contact</a>
       </li>
     </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="<?php echo base_url(); ?>/users/logout" class="nav-link">Logout</a>
+      </li>
+    </ul>
 
   </nav>
   <!-- /.navbar -->
