@@ -28,7 +28,12 @@
 <!-- PAGE PLUGINS -->
 <!-- JQVMap -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/jquery.vmap.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<script src="<?php echo base_url(); ?>assets/plugins/jqvmap/maps/jquery.vmap.tunisia.js"></script>
+<script>
+  $(function(){
+    $('#world-map').vectorMap({map: 'tunisia'});
+  });
+</script>
 <!-- jQuery Mapael -->
 <script src="<?php echo base_url(); ?>assets/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
 <script src="<?php echo base_url(); ?>assets/plugins/raphael/raphael.min.js"></script>

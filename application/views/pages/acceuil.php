@@ -126,3 +126,5 @@
                 <!-- /.row -->
               </div>
             </div>
+            <div class="card-body">
+                <div id="world-map" style="height: 250px; width: 100%;"></div>
