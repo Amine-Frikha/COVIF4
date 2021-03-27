@@ -7,7 +7,7 @@
 			if(!file_exists(APPPATH.'views/pages/'.$page.'.php')){
 				show_404();
 			}
-			$data['title'] = 'Tableau de bord';
+			$data['title'] = 'COVIF4';
 			$this->load->view('templates/header',$data);
 			$this->load->view('pages/'.$page,$data);
 			$this->load->view('templates/footer');
