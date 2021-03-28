@@ -1,12 +1,9 @@
 <?php 
-
 $jsonDataTunisia=file_get_contents("https://api.covid19api.com/live/country/Tunisia/status/confirmed");
 $dataTunisia=json_decode($jsonDataTunisia,true);
 $jsonDataWorld=file_get_contents("https://api.covid19api.com/world/total");
 $dataWorld=json_decode($jsonDataWorld,true);
-
 ?> 
- 
  <!-- Content Wrapper. Contains page content -->
  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
