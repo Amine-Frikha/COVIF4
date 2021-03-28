@@ -37,7 +37,7 @@ $dataWorld=json_decode($jsonDataWorld,true);
                 <span class="info-box-text">Cas Confirmés (Globale)</span>
                 <span class="info-box-number">
                   <?php
-                  echo $dataWorld['TotalConfirmed'];
+                  echo  number_format($dataWorld['TotalConfirmed']);
                   ?>
                 </span>
               </div>
@@ -54,7 +54,7 @@ $dataWorld=json_decode($jsonDataWorld,true);
                 <span class="info-box-text">Cumul Des Décès</span>
                 <span class="info-box-number">
                 <?php
-                  echo $dataWorld['TotalDeaths'];
+                  echo  number_format($dataWorld['TotalDeaths']);
                   ?>
                 </span>
               </div>
@@ -75,7 +75,7 @@ $dataWorld=json_decode($jsonDataWorld,true);
                 <span class="info-box-text">Cas Récupérés</span>
                 <span class="info-box-number">
                 <?php
-                  echo $dataWorld['TotalRecovered'];
+                  echo number_format($dataWorld['TotalRecovered']);
                   ?>
                 </span>
               </div>
@@ -112,10 +112,10 @@ $dataWorld=json_decode($jsonDataWorld,true);
                       ?>
                       <?php if ($key>'60') { ?>
                     <tr>
-                      <td><?php echo $val['Date']; ?></td>
-                      <td><?php echo $val['Confirmed']; ?></td>    
-                      <td><?php echo $val['Deaths']; ?></td> 
-                      <td><?php echo $val['Recovered']; ?></td>     
+                      <td><?php echo substr_replace($val['Date'], '', 10, 10); ?></td>
+                      <td><?php echo number_format($val['Confirmed']); ?></td>    
+                      <td><?php echo number_format($val['Deaths']); ?></td> 
+                      <td><?php echo number_format($val['Recovered']); ?></td>     
                     </tr> 
                     <?php } ?>
                     <?php } ?> 
