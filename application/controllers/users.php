@@ -119,7 +119,7 @@
                     );
                     $this->session->set_userdata($user_data);
                     $this->session->set_flashdata('user_loggedin','Vous êtes maintenant connecté');
-                    redirect('pages/view');
+                    redirect('');
                 }else{
                     $this->session->set_flashdata('user_loggedin','Vous êtes maintenant connecté');
                     redirect('users/login');

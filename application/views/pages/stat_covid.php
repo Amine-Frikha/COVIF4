@@ -15,8 +15,8 @@ $dataWorld=json_decode($jsonDataWorld,true);
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v2</li>
+              <li class="breadcrumb-item">Statistiques</li>
+              <li class="breadcrumb-item active">COVID-19</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -29,15 +29,15 @@ $dataWorld=json_decode($jsonDataWorld,true);
       <div class="container-fluid">
         <!-- Info boxes -->
         <div class="row">
-          <div class="col-12 col-sm-6 col-md-3">
+          <div class="col-4">
             <div class="info-box">
-              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-head-side-cough"></i></span>
 
               <div class="info-box-content">
                 <span class="info-box-text">Cas Confirmés (Globale)</span>
                 <span class="info-box-number">
                   <?php
-                  echo $dataWorld['TotalConfirmed'];
+                  echo  number_format($dataWorld['TotalConfirmed']);
                   ?>
                 </span>
               </div>
@@ -46,15 +46,15 @@ $dataWorld=json_decode($jsonDataWorld,true);
             <!-- /.info-box -->
           </div>
           <!-- /.col -->
-          <div class="col-12 col-sm-6 col-md-3">
+          <div class="col-4">
             <div class="info-box mb-3">
-              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-skull-crossbones"></i></span>
 
               <div class="info-box-content">
                 <span class="info-box-text">Cumul Des Décès</span>
                 <span class="info-box-number">
                 <?php
-                  echo $dataWorld['TotalDeaths'];
+                  echo  number_format($dataWorld['TotalDeaths']);
                   ?>
                 </span>
               </div>
@@ -67,15 +67,15 @@ $dataWorld=json_decode($jsonDataWorld,true);
           <!-- fix for small devices only -->
           <div class="clearfix hidden-md-up"></div>
           
-          <div class="col-12 col-sm-6 col-md-3">
+          <div class="col-4">
             <div class="info-box mb-3">
-              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
+              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-virus-slash"></i></span>
 
               <div class="info-box-content">
                 <span class="info-box-text">Cas Récupérés</span>
                 <span class="info-box-number">
                 <?php
-                  echo $dataWorld['TotalRecovered'];
+                  echo number_format($dataWorld['TotalRecovered']);
                   ?>
                 </span>
               </div>
@@ -84,18 +84,7 @@ $dataWorld=json_decode($jsonDataWorld,true);
             <!-- /.info-box -->
           </div>
           <!-- /.col -->
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
 
-              <div class="info-box-content">
-                <span class="info-box-text">New Members</span>
-                <span class="info-box-number">2,000</span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
           <!-- /.col -->
         </div>
         <!-- /.row -->
@@ -104,7 +93,7 @@ $dataWorld=json_decode($jsonDataWorld,true);
       <div class="col-sm-8">
         <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with default features</h3>
+                <h3 class="card-title">Chiffres COVID-19 En Tunisie</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -123,10 +112,10 @@ $dataWorld=json_decode($jsonDataWorld,true);
                       ?>
                       <?php if ($key>'60') { ?>
                     <tr>
-                      <td><?php echo $val['Date']; ?></td>
-                      <td><?php echo $val['Confirmed']; ?></td>    
-                      <td><?php echo $val['Deaths']; ?></td> 
-                      <td><?php echo $val['Recovered']; ?></td>     
+                      <td><?php echo substr_replace($val['Date'], '', 10, 10); ?></td>
+                      <td><?php echo number_format($val['Confirmed']); ?></td>    
+                      <td><?php echo number_format($val['Deaths']); ?></td> 
+                      <td><?php echo number_format($val['Recovered']); ?></td>     
                     </tr> 
                     <?php } ?>
                     <?php } ?> 
@@ -149,7 +138,7 @@ $dataWorld=json_decode($jsonDataWorld,true);
               <div class="card-header border-0">
                 <h3 class="card-title">
                   <i class="fas fa-map-marker-alt mr-1"></i>
-                  Visitors
+                  Carte De La Tunisie
                 </h3>
                 <!-- card tools -->
                 <div class="card-tools">
@@ -163,28 +152,7 @@ $dataWorld=json_decode($jsonDataWorld,true);
                 <!-- /.card-tools -->
               </div>
               <div class="card-body">
-                <div id="world-map" style="height: 500px; width: 100%;"></div>
-              </div>
-              <!-- /.card-body-->
-              <div class="card-footer bg-transparent">
-                <div class="row">
-                  <div class="col-4 text-center">
-                    <div id="sparkline-1"></div>
-                    <div class="text-white">Visitors</div>
-                  </div>
-                  <!-- ./col -->
-                  <div class="col-4 text-center">
-                    <div id="sparkline-2"></div>
-                    <div class="text-white">Online</div>
-                  </div>
-                  <!-- ./col -->
-                  <div class="col-4 text-center">
-                    <div id="sparkline-3"></div>
-                    <div class="text-white">Sales</div>
-                  </div>
-                  <!-- ./col -->
-                </div>
-                <!-- /.row -->
+                <div id="world-map" style="height: 675px; width: 100%;"></div>
               </div>
         </div>
       </div>
