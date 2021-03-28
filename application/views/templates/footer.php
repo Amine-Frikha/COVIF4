@@ -61,7 +61,10 @@
   $(function () {
     $("#example1").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
-      "buttons": ["csv", "pdf", "print", "colvis"]
+      "buttons": ["csv", "pdf", "print", "colvis"],
+      "language": {
+    "url": "//cdn.datatables.net/plug-ins/1.10.24/i18n/French.json"
+  }
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
   });
 </script>
