@@ -1,3 +1,12 @@
+<?php 
+
+$jsonDataTunisia=file_get_contents("https://api.covid19api.com/live/country/Tunisia/status/confirmed");
+$dataTunisia=json_decode($jsonDataTunisia,true);
+$jsonDataWorld=file_get_contents("https://api.covid19api.com/world/total");
+$dataWorld=json_decode($jsonDataWorld,true);
+
+?> 
+ 
  <!-- Content Wrapper. Contains page content -->
  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -5,7 +14,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard v2</h1>
+            <h1 class="m-0">Statistiques COVID-19</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -28,10 +37,11 @@
               <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">CPU Traffic</span>
+                <span class="info-box-text">Cas Confirmés (Globale)</span>
                 <span class="info-box-number">
-                  10
-                  <small>%</small>
+                  <?php
+                  echo $dataWorld['TotalConfirmed'];
+                  ?>
                 </span>
               </div>
               <!-- /.info-box-content -->
@@ -44,8 +54,12 @@
               <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Likes</span>
-                <span class="info-box-number">41,410</span>
+                <span class="info-box-text">Cumul Des Décès</span>
+                <span class="info-box-number">
+                <?php
+                  echo $dataWorld['TotalDeaths'];
+                  ?>
+                </span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -61,8 +75,12 @@
               <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Sales</span>
-                <span class="info-box-number">760</span>
+                <span class="info-box-text">Cas Récupérés</span>
+                <span class="info-box-number">
+                <?php
+                  echo $dataWorld['TotalRecovered'];
+                  ?>
+                </span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -84,6 +102,59 @@
           <!-- /.col -->
         </div>
         <!-- /.row -->
+      </div>
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">DataTable with default features</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Cas Confirmés</th>
+                    <th>Décès</th>
+                    <th>Cas Récupérés</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <?php
+                    foreach($dataTunisia as $key => $val){
+                      ?>
+                    <tr>
+                      <?php if ($key>'60') { 
+                        echo "<td>" ;
+                        echo $val['Date'];
+                        echo "</td>"; 
+                        echo "<td>" ;
+                        echo $val['Confirmed'];
+                        echo "</td>";
+                        echo "<td>" ;
+                        echo $val['Deaths'];
+                        echo "</td>";
+                        echo "<td>" ;
+                        echo $val['Recovered'];
+                        echo "</td>";} ?>
+                    </tr> 
+                  <?php } ?> 
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                  <th>Date</th>
+                  <th>Cas Confirmés</th>
+                  <th>Décès</th>
+                  <th>Cas Récupérés</th>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+        </div> 
+      <div class="col-sm-4">
         <div class="card bg-gradient-primary">
               <div class="card-header border-0">
                 <h3 class="card-title">
@@ -102,7 +173,7 @@
                 <!-- /.card-tools -->
               </div>
               <div class="card-body">
-                <div id="world-map" style="height: 250px; width: 100%;"></div>
+                <div id="world-map" style="height: 500px; width: 100%;"></div>
               </div>
               <!-- /.card-body-->
               <div class="card-footer bg-transparent">
@@ -125,6 +196,8 @@
                 </div>
                 <!-- /.row -->
               </div>
-            </div>
-            <div class="card-body">
-                <div id="world-map" style="height: 250px; width: 100%;"></div>
+        </div>
+      </div>
+    </div>
+    </section>
+    
