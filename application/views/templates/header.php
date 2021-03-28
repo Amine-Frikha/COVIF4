@@ -42,7 +42,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Acceuil</a>
+        <a href="./acceuil" class="nav-link">Acceuil</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contactez-nous</a>
@@ -60,7 +60,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="./acceuil" class="brand-link">
       <img src="<?php echo base_url(); ?>assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">COVIF4</span>
     </a>
@@ -86,7 +86,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-            <a href="./acceuil" class="nav-link">
+            <a href="./acceuil" class="nav-link <?php if ($title=='COVIF4') {echo 'active';} ?>">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Acceuil
@@ -94,7 +94,7 @@
             </a>
           </li>
             <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="#" class="nav-link <?php if ($title=='Statistiques COVID-19') {echo 'active';} ?>">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Statistiques
@@ -103,7 +103,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./stat_covid" class="nav-link  active">
+                <a href="./stat_covid" class="nav-link <?php if ($title=='Statistiques COVID-19') {echo 'active';} ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>COVID-19</p>
                 </a>
