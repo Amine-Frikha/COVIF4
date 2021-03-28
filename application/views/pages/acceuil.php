@@ -118,25 +118,18 @@ $dataWorld=json_decode($jsonDataWorld,true);
                   </tr>
                   </thead>
                   <tbody>
-                  <?php
-                    foreach($dataTunisia as $key => $val){
+                     <?php
+                    foreach($dataTunisia as $key => $val) {
                       ?>
+                      <?php if ($key>'60') { ?>
                     <tr>
-                      <?php if ($key>'60') { 
-                        echo "<td>" ;
-                        echo $val['Date'];
-                        echo "</td>"; 
-                        echo "<td>" ;
-                        echo $val['Confirmed'];
-                        echo "</td>";
-                        echo "<td>" ;
-                        echo $val['Deaths'];
-                        echo "</td>";
-                        echo "<td>" ;
-                        echo $val['Recovered'];
-                        echo "</td>";} ?>
+                      <td><?php echo $val['Date']; ?></td>
+                      <td><?php echo $val['Confirmed']; ?></td>    
+                      <td><?php echo $val['Deaths']; ?></td> 
+                      <td><?php echo $val['Recovered']; ?></td>     
                     </tr> 
-                  <?php } ?> 
+                    <?php } ?>
+                    <?php } ?> 
                   </tbody>
                   <tfoot>
                   <tr>
