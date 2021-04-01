@@ -26,7 +26,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
 
   <!-- Preloader -->
@@ -35,7 +35,7 @@
   </div>
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-dark">
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -86,13 +86,21 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-            <a href="./acceuil" class="nav-link <?php if ($title=='COVIF4') {echo 'active';} ?>">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Acceuil
-              </p>
-            </a>
-          </li>
+              <a href="./acceuil" class="nav-link <?php if ($title=='COVIF4') {echo 'active';} ?>">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                  Acceuil
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./inscription" class="nav-link <?php if ($title=='inscription') {echo 'active';} ?>">
+                <i class="nav-icon fas fa-syringe"></i>
+                <p>
+                  Inscription vaccin
+                </p>
+              </a>
+            </li>
             <li class="nav-item menu-open">
             <a href="#" class="nav-link <?php if ($title=='Statistiques COVID-19') {echo 'active';} ?>">
               <i class="nav-icon fas fa-tachometer-alt"></i>
