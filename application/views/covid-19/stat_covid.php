@@ -142,9 +142,6 @@ $dataWorld=json_decode($jsonDataWorld,true);
                 </h3>
                 <!-- card tools -->
                 <div class="card-tools">
-                  <button type="button" class="btn btn-primary btn-sm daterange" title="Date range">
-                    <i class="far fa-calendar-alt"></i>
-                  </button>
                   <button type="button" class="btn btn-primary btn-sm" data-card-widget="collapse" title="Collapse">
                     <i class="fas fa-minus"></i>
                   </button>
