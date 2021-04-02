@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+  <head>
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  </head>
  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -40,11 +44,6 @@
                         <?php echo form_error('numero'); ?>
                       </div>
                       <div class="form-group">
-                        <label>Genre:</label>
-                        <input type="radio" id="radioPrimary2" name="genre" value="homme"><label for="radioPrimary2">Homme</label>
-                        <input type="radio" id="radioPrimary2" name="genre" value="femme"><label for="radioPrimary2">Femme</label>
-                        <?php echo form_error('genre'); ?>
-                      </div><div class="form-group">
                         <label>Lieu de vaccination(Gouvernerat):</label>
                         <input type="text" class="form-control" name="gouvernerat" placeholder="Entrer ..">
                         <?php echo form_error('gouvernerat'); ?>
@@ -54,57 +53,72 @@
                         <input type="text" class="form-control" name="delegation" placeholder="Entrer ..">
                         <?php echo form_error('delegation'); ?>
                       </div>
+                      <div class="form-group">  
+                        <label>Genre:</label><br/>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="genre1" name="genre" value="homme">
+                          <label for="genre1">Homme</label>
+                        </div>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="genre2" name="genre" value="femme">
+                          <label for="genre2">Femme</label>
+                        </div>
+                        <?php echo form_error('genre'); ?>
+                      </div>
                       <div class="form-group">
-                        <label>Avez-vous été atteint de la COVID-19 ?</label>
-                        <input type="text" class="form-control" name="atteint" placeholder="Entrer ..">
+                        <label>Avez-vous été atteint de la COVID-19 ?</label><br/>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="atteint1" name="atteint" value="1">
+                          <label for="atteint1">Oui</label>
+                        </div>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="atteint2" name="atteint" value="0">
+                          <label for="atteint2">Non</label>
+                        </div>
                         <?php echo form_error('atteint'); ?>
                       </div>
                       <div class="form-group">
-                        <label>Etes-vous atteint du diabète ?</label>
-                        <input type="text" class="form-control" name="diabete" placeholder="Entrer ..">
+                        <label>Etes-vous atteint du diabète ?</label><br/>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="diabete1" name="diabete" value="1">
+                          <label for="diabete1">Oui</label>
+                        </div>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="diabete2" name="diabete" value="0">
+                          <label for="diabete2">Non</label>
+                        </div>
                         <?php echo form_error('diabete'); ?>
                       </div>
                       <div class="form-group">
-                        <label>Avez-vous suivi des traitements anti-cancers ou immunosuppresseurs ?</label>
-                        <input type="text" class="form-control" name="immunosepresseur" placeholder="Entrer ..">
+                        <label>Avez-vous suivi des traitements anti-cancers ou immunosuppresseurs ?</label><br/>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="immunosepresseur1" name="immunosepresseur" value="1">
+                          <label for="immunosepresseur1">Oui</label>
+                        </div>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="immunosepresseur2" name="immunosepresseur" value="0">
+                          <label for="immunosepresseur2">Non</label>
+                        </div>
                         <?php echo form_error('immunosepresseur'); ?>
                       </div>   
                       <div class="form-group">
-                        <label>Veiller préciser votre poids (Kg)</label>
-                        <input type="text" class="form-control" name="poids" placeholder="Entrer ..">
-                        <?php echo form_error('poids'); ?>
+                        <label>Avez-vous été atteint d'une maladie respiratoire chronique ?</label><br/>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="maladie_respir1" name="maladie_respir" value="1">
+                          <label for="maladie_respir1">Oui</label>
+                        </div>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="maladie_respir2" name="maladie_respir" value="0">
+                          <label for="maladie_respir2">Non</label>
+                        </div>
+                        <?php echo form_error('maladie_respir'); ?>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label>Etes vous atteint d'hypertension artérielle ?</label>
-                        <input type="text" class="form-control" name="hyper_art" placeholder="Entrer ..">
-                        <?php echo form_error('hyper_art'); ?>
-                      </div>
-                      <div class="form-group">
-                        <label>Etes-vous atteint d'une maladie rénale chronique ?</label>
-                        <input type="text" class="form-control" name="maladie_renale" placeholder="Entrer ..">
-                        <?php echo form_error('maladie_renale'); ?>
-                      </div>
-                      <div class="form-group">
-                        <label>Etes-vous atteint de l'insuffisance cardiaque ?</label>
-                        <input type="text" class="form-control" name="insuff_cardiaque" placeholder="Entrer ..">
-                        <?php echo form_error('insuff_cardiaque'); ?>
-                      </div>
-                      <div class="form-group">
-                        <label>Avez-vous subi une greffe d'organe ?</label>
-                        <input type="text" class="form-control" name="greffe_organe" placeholder="Entrer ..">
-                        <?php echo form_error('greffe_organe'); ?>
-                      </div>
-                      <div class="form-group">
-                        <label>Avez-vous été atteint d'une maladie respiratoire chronique ?</label>
-                        <input type="text" class="form-control" name="maladie_respir" placeholder="Entrer ..">
-                        <?php echo form_error('maladie_respir'); ?>
-                      </div>   
-                      <div class="form-group">
-                        <label>Veiller préciser votre poids (Kg) :</label>
-                        <input type="text" class="form-control" name="poids" placeholder="Entrer ..">
-                        <?php echo form_error('poids'); ?>
+                        <label>Enter votre CIN:</label>
+                        <input type="text" class="form-control" name="CIN" placeholder="Entrer ..">
+                        <?php echo form_error('CIN'); ?>
                       </div>   
                       <div class="form-group">
                         <label>Veiller préciser votre taille en cm :</label>
@@ -112,17 +126,70 @@
                         <?php echo form_error('taille'); ?>
                       </div>   
                       <div class="form-group">
-                        <label>Faites-vous partie du personnel de santé ?</label>
-                        <input type="text" class="form-control" name="personnel_sante" placeholder="Entrer ..">
+                        <label>Veiller préciser votre poids (Kg)</label><br/>
+                        <input type="text" class="form-control" name="poids" placeholder="Entrer ..">
+                        <?php echo form_error('poids'); ?>
+                      </div>
+                      <div class="form-group">
+                        <label>Etes vous atteint d'hypertension artérielle ?</label><br/>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="hyper_art1" name="hyper_art" value="1">
+                          <label for="hyper_art1">Oui</label>
+                        </div>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="hyper_art2" name="hyper_art" value="0">
+                          <label for="hyper_art2">Non</label>
+                        </div>
+                        <?php echo form_error('hyper_art'); ?>
+                      </div>
+                      <div class="form-group">
+                        <label>Etes-vous atteint d'une maladie rénale chronique ?</label><br/>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="maladie_renale1" name="maladie_renale" value="1">
+                          <label for="maladie_renale1">Oui</label>
+                        </div>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="maladie_renale2" name="maladie_renale" value="0">
+                          <label for="maladie_renale2">Non</label>
+                        </div>
+                        <?php echo form_error('maladie_renale'); ?>
+                      </div>
+                      <div class="form-group">
+                        <label>Etes-vous atteint de l'insuffisance cardiaque ?</label><br/>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="insuff_cardiaque1" name="insuff_cardiaque" value="1">
+                          <label for="insuff_cardiaque1">Oui</label>
+                        </div>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="insuff_cardiaque2" name="insuff_cardiaque" value="0">
+                          <label for="insuff_cardiaque2">Non</label>
+                        </div>
+                        <?php echo form_error('insuff_cardiaque'); ?>
+                      </div>
+                      <div class="form-group">
+                        <label>Avez-vous subi une greffe d'organe ?</label><br/>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="igreffe_organe1" name="greffe_organe" value="1">
+                          <label for="igreffe_organe1">Oui</label>
+                        </div>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="igreffe_organe2" name="greffe_organe" value="0">
+                          <label for="igreffe_organe2">Non</label>
+                        </div>
+                        <?php echo form_error('greffe_organe'); ?>
+                      </div>
+                      <div class="form-group">
+                        <label>Faites-vous partie du personnel de santé ?</label><br/>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="personnel_sante1" name="personnel_sante" value="1">
+                          <label for="personnel_sante1">Oui</label>
+                        </div>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="personnel_sante2" name="personnel_sante" value="0">
+                          <label for="personnel_sante2">Non</label>
+                        </div>
                         <?php echo form_error('personnel_sante'); ?>
                       </div>   
-                    </div>
-                    <div class="form-group">
-                      <label>Type</label>
-                      <select class="form-control" name="type">
-                        <option>Personne physique</option>
-                        <option>Personne morale</option>
-                      </select>
                     </div>
                  </div>
                   <div class="row">

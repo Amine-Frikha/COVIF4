@@ -23,6 +23,7 @@
 			}
 			$this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>'); 
 			$this->form_validation->set_rules('id', 'id', 'required');
+			$this->form_validation->set_rules('CIN', 'CIN', 'required');
 			$this->form_validation->set_rules('numero', 'numero', 'required');
 			$this->form_validation->set_rules('genre', 'genre', 'required');
 			$this->form_validation->set_rules('gouvernerat', 'gouvernerat', 'required');
@@ -78,6 +79,7 @@
 			}
 			$this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>'); 
 			$this->form_validation->set_rules('id', 'id', 'required');
+			$this->form_validation->set_rules('CIN', 'CIN', 'required');
 			$this->form_validation->set_rules('numero', 'numero', 'required');
 			$this->form_validation->set_rules('genre', 'genre', 'required');
 			$this->form_validation->set_rules('gouvernerat', 'gouvernerat', 'required');

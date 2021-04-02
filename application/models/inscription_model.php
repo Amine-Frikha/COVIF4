@@ -14,6 +14,7 @@
         public function ajouter_inscription(){
 			$data = array(
                 'id' => $this->input->post('id'),
+                'CIN' => $this->input->post('CIN'),
                 'numero' => $this->input->post('numero'),
                 'genre' => $this->input->post('genre'),
                 'gouvernerat' => $this->input->post('gouvernerat'),
@@ -42,6 +43,7 @@
         public function update_inscription() {
             $data = array(
                 'id' => $this->input->post('id'),
+                'CIN' => $this->input->post('CIN'),
                 'numero' => $this->input->post('numero'),
                 'genre' => $this->input->post('genre'),
                 'gouvernerat' => $this->input->post('gouvernerat'),
