@@ -87,7 +87,7 @@
                with font-awesome or any other icon font library -->
             <li class="nav-item">
               <a href="./acceuil" class="nav-link <?php if ($title=='COVIF4') {echo 'active';} ?>">
-                <i class="nav-icon fas fa-th"></i>
+                <i class="nav-icon fas fa-home"></i>
                 <p>
                   Acceuil
                 </p>
@@ -103,7 +103,7 @@
             </li>
             <li class="nav-item menu-open">
             <a href="#" class="nav-link <?php if ($title=='Statistiques COVID-19') {echo 'active';} ?>">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 Statistiques
                 <i class="right fas fa-angle-left"></i>

@@ -62,7 +62,7 @@ $dataWorld=json_decode($jsonDataWorld,true);
               <div class="icon">
               <i class="fas fa-chart-bar"></i>
               </div>
-              <a href="#" class="small-box-footer">
+              <a href="./stat_covid" class="small-box-footer">
               Accéder <i class="fas fa-arrow-circle-right"></i>
               </a>
             </div>
@@ -79,7 +79,7 @@ $dataWorld=json_decode($jsonDataWorld,true);
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
               </div>
-              <a href="#" class="small-box-footer">
+              <a href="./vaccin" class="small-box-footer">
               Accéder <i class="fas fa-arrow-circle-right"></i>
               </a>
             </div>
@@ -91,18 +91,18 @@ $dataWorld=json_decode($jsonDataWorld,true);
           <div class="clearfix hidden-md-up"></div>
           
           <div class="col-4">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-virus-slash"></i></span>
+          <div class="small-box bg-warning">
+              <div class="inner">
+                <h4>Modifier vos données</h4>
 
-              <div class="info-box-content">
-                <span class="info-box-text">Cas Récupérés</span>
-                <span class="info-box-number">
-                <?php
-                  echo number_format($dataWorld['TotalRecovered']);
-                  ?>
-                </span>
+                <p></br></p>
               </div>
-              <!-- /.info-box-content -->
+              <div class="icon">
+                <i class="fas fa-user-plus"></i>
+              </div>
+              <a href="#" class="small-box-footer">
+              Accéder <i class="fas fa-arrow-circle-right"></i>
+              </a>
             </div>
             <!-- /.info-box -->
           </div>
@@ -111,6 +111,65 @@ $dataWorld=json_decode($jsonDataWorld,true);
           <!-- /.col -->
         </div>
         <!-- /.row -->
+        <div class="row">
+          <div class="col-4">
+          <div class="small-box bg-info">
+              <div class="inner">
+                <h4>Questions fréquemment posées</h4>
+
+                <p></br></p>
+              </div>
+              <div class="icon">
+              <i class="fas fa-question"></i>
+              </div>
+              <a href="./stat_covid" class="small-box-footer">
+              Accéder <i class="fas fa-arrow-circle-right"></i>
+              </a>
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-4">
+          <div class="small-box bg-success">
+              <div class="inner">
+              <h4>Besoin d'aide ?</h4>
+
+                <p></br></p>
+              </div>
+              <div class="icon">
+              <i class="fas fa-hands-helping"></i>
+              </div>
+              <a href="./vaccin" class="small-box-footer">
+              Contactez-nous <i class="fas fa-arrow-circle-right"></i>
+              </a>
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+          <!-- fix for small devices only -->
+          <div class="clearfix hidden-md-up"></div>
+          
+          <div class="col-4">
+          <div class="small-box bg-danger">
+              <div class="inner">
+                <h4>Annuler Votre Inscription</h4>
+
+                <p></br></p>
+              </div>
+              <div class="icon">
+              <i class="far fa-window-close"></i>
+              </div>
+              <a href="#" class="small-box-footer">
+              Accéder <i class="fas fa-arrow-circle-right"></i>
+              </a>
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+          <!-- /.col -->
+        </div>
       </div>
  
     </section>
