@@ -2,7 +2,7 @@
 	class Stat_covid extends CI_Controller{
 		public function index(){
 			if(!$this->session->userdata('logged_in')){
-				redirect('login');
+				redirect('users/login');
 			}
 			$data['title'] = 'Statistiques COVID-19';
 			$this->load->view('templates/header',$data);
