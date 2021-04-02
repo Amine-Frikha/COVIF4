@@ -11,12 +11,12 @@ $dataWorld=json_decode($jsonDataWorld,true);
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Statistiques COVID-19</h1>
+            <h1 class="m-0">Bienvenue à COVIF4</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item">Statistiques</li>
-              <li class="breadcrumb-item active">COVID-19</li>
+              <li class="breadcrumb-item">Acceuil</li>
+              <li class="breadcrumb-item active">Acceuil</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -28,37 +28,60 @@ $dataWorld=json_decode($jsonDataWorld,true);
     <section class="content">
       <div class="container-fluid">
         <!-- Info boxes -->
+        <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Vous êtes abonné avec succès!</h3>
+
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+              <i class="fas fa-minus"></i>
+            </button>
+            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+        <div class="card-body">
+        Vous recevrez une notification dès que ce sera à 
+        votre tour d'être vacciné.
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+        Vous êtes libre de consulter les fonctionnalités de notre application ci-dessous.
+        </div>
+        <!-- /.card-footer-->
+      </div>
         <div class="row">
           <div class="col-4">
-            <div class="info-box">
-              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-head-side-cough"></i></span>
+          <div class="small-box bg-info">
+              <div class="inner">
+                <h4>Statistiques COVID-19</h4>
 
-              <div class="info-box-content">
-                <span class="info-box-text">Cas Confirmés (Globale)</span>
-                <span class="info-box-number">
-                  <?php
-                  echo  number_format($dataWorld['TotalConfirmed']);
-                  ?>
-                </span>
+                <p></br></p>
               </div>
-              <!-- /.info-box-content -->
+              <div class="icon">
+              <i class="fas fa-chart-bar"></i>
+              </div>
+              <a href="#" class="small-box-footer">
+              Accéder <i class="fas fa-arrow-circle-right"></i>
+              </a>
             </div>
             <!-- /.info-box -->
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-skull-crossbones"></i></span>
+          <div class="small-box bg-success">
+              <div class="inner">
+              <h4>Statistiques Du Vaccin</h4>
 
-              <div class="info-box-content">
-                <span class="info-box-text">Cumul Des Décès</span>
-                <span class="info-box-number">
-                <?php
-                  echo  number_format($dataWorld['TotalDeaths']);
-                  ?>
-                </span>
+                <p></br></p>
               </div>
-              <!-- /.info-box-content -->
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="#" class="small-box-footer">
+              Accéder <i class="fas fa-arrow-circle-right"></i>
+              </a>
             </div>
             <!-- /.info-box -->
           </div>
@@ -89,73 +112,6 @@ $dataWorld=json_decode($jsonDataWorld,true);
         </div>
         <!-- /.row -->
       </div>
-    <div class="row">
-      <div class="col-sm-8">
-        <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Chiffres COVID-19 En Tunisie</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
-                  <thead>
-                  <tr>
-                    <th>Date</th>
-                    <th>Cas Confirmés</th>
-                    <th>Décès</th>
-                    <th>Cas Récupérés</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                     <?php
-                    foreach($dataTunisia as $key => $val) {
-                      ?>
-                      <?php if ($key>'60') { ?>
-                    <tr>
-                      <td><?php echo substr_replace($val['Date'], '', 10, 10); ?></td>
-                      <td><?php echo number_format($val['Confirmed']); ?></td>    
-                      <td><?php echo number_format($val['Deaths']); ?></td> 
-                      <td><?php echo number_format($val['Recovered']); ?></td>     
-                    </tr> 
-                    <?php } ?>
-                    <?php } ?> 
-                  </tbody>
-                  <tfoot>
-                  <tr>
-                  <th>Date</th>
-                  <th>Cas Confirmés</th>
-                  <th>Décès</th>
-                  <th>Cas Récupérés</th>
-                  </tr>
-                  </tfoot>
-                </table>
-              </div>
-              <!-- /.card-body -->
-            </div>
-        </div> 
-      <div class="col-sm-4">
-        <div class="card bg-gradient-primary">
-              <div class="card-header border-0">
-                <h3 class="card-title">
-                  <i class="fas fa-map-marker-alt mr-1"></i>
-                  Carte De La Tunisie
-                </h3>
-                <!-- card tools -->
-                <div class="card-tools">
-                  <button type="button" class="btn btn-primary btn-sm daterange" title="Date range">
-                    <i class="far fa-calendar-alt"></i>
-                  </button>
-                  <button type="button" class="btn btn-primary btn-sm" data-card-widget="collapse" title="Collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                </div>
-                <!-- /.card-tools -->
-              </div>
-              <div class="card-body">
-                <div id="world-map" style="height: 675px; width: 100%;"></div>
-              </div>
-        </div>
-      </div>
-    </div>
+ 
     </section>
     
