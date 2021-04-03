@@ -45,7 +45,7 @@
         <a href="./acceuil" class="nav-link">Acceuil</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contactez-nous</a>
+        <a href="./contact" class="nav-link">Contactez-nous</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
