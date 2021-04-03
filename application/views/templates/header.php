@@ -42,10 +42,10 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="./acceuil" class="nav-link">Acceuil</a>
+        <a href="./contact" class="nav-link">Contactez-Nous</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contactez-nous</a>
+        <a href="./faq" class="nav-link">Questions Fréquemment Posées</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
@@ -62,7 +62,7 @@
     <!-- Brand Logo -->
     <a href="./acceuil" class="brand-link">
       <img src="<?php echo base_url(); ?>assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">COVIF4</span>
+      <span class="brand-text font-weight-light">COV<strong>IF4</strong></span>
     </a>
 
     <!-- Sidebar -->
