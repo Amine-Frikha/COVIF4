@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>COVif4</title>
+  <title>COVIF4</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -30,7 +30,7 @@
 <body class="hold-transition login-page" style="background-image: url('<?php echo base_url(); ?>assets/dist/img/stet.jpg'); background-size:cover;">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>COV</b>IF4</a>
+    <a href="../../index2.html">COV<strong>IF4</strong></a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
