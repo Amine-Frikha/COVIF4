@@ -42,10 +42,10 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="./acceuil" class="nav-link">Acceuil</a>
+        <a href="./contact" class="nav-link">Contactez-Nous</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="./contact" class="nav-link">Contactez-nous</a>
+        <a href="./faq" class="nav-link">Questions Fréquemment Posées</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">

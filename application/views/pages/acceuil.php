@@ -139,7 +139,7 @@ $dataWorld=json_decode($jsonDataWorld,true);
               <div class="icon">
               <i class="fas fa-hands-helping"></i>
               </div>
-              <a href="./vaccin" class="small-box-footer">
+              <a href="./contact" class="small-box-footer">
               Contactez-nous <i class="fas fa-arrow-circle-right"></i>
               </a>
             </div>
