@@ -4,17 +4,28 @@
 			if(!$this->session->userdata('logged_in')){
 				redirect('users/login');
 			}
-			$data= array(
-				'inscription' => $this->inscription_model->afficher_inscriptions(),
-				'id' => $this->session->userdata('id'),
-			);
+			$id=$this->session->userdata('id');
 			$d= array(
 				'title' => "inscription",
-				'inscription' => $this->inscription_model->afficher_inscriptions(),
 			);
-			$this->load->view('templates/header',$d);
-			$this->load->view('vaccination/inscription',$data);
-			$this->load->view('templates/footer');
+			$query = $this->db->get_where('inscriptions',array('id'=> $id));
+			if ($query->num_rows()==0){
+				$data= array(
+					'id' => $id,
+				);
+				$this->load->view('templates/header',$d);
+				$this->load->view('vaccination/inscription',$data);
+				$this->load->view('templates/footer');
+			}
+			else{
+				$data= array(
+					'id' => $id,
+					'inscription' => $query->row_array()
+				);
+				$this->load->view('templates/header',$d);
+				$this->load->view('vaccination/modifier_inscription',$data);
+				$this->load->view('templates/footer');
+			}
 		}
 
 		public function ajouter(){
@@ -23,8 +34,8 @@
 			}
 			$this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>'); 
 			$this->form_validation->set_rules('id', 'id', 'required');
-			$this->form_validation->set_rules('CIN', 'CIN', 'required');
-			$this->form_validation->set_rules('numero', 'numero', 'required');
+			$this->form_validation->set_rules('CIN', 'CIN', 'required|exact_length[8]|numeric');
+			$this->form_validation->set_rules('numero', 'numero', 'required|exact_length[8]|numeric');
 			$this->form_validation->set_rules('genre', 'genre', 'required');
 			$this->form_validation->set_rules('gouvernerat', 'gouvernerat', 'required');
 			$this->form_validation->set_rules('delegation', 'delegation', 'required');
@@ -36,19 +47,14 @@
 			$this->form_validation->set_rules('greffe_organe', 'greffe_organe', 'required');
 			$this->form_validation->set_rules('maladie_respir', 'maladie_respir', 'required');
 			$this->form_validation->set_rules('immunosepresseur', 'immunosepresseur', 'required');
-			$this->form_validation->set_rules('poids', 'poids', 'required');
-			$this->form_validation->set_rules('taille', 'taille', 'required');
+			$this->form_validation->set_rules('poids', 'poids', 'required|numeric');
+			$this->form_validation->set_rules('taille', 'taille', 'required|numeric');
 			$this->form_validation->set_rules('personnel_sante', 'personnel_sante', 'required');
 			if($this->form_validation->run() === FALSE){
-				$d= array(
-					'title' => "ajouter inscription",
-					'inscription' => $this->inscription_model->afficher_inscriptions(),
-				);
-				$this->load->view('templates/header',$d);
-				$this->load->view('vaccination/ajouter_inscription');
+				redirect_back();
 			} else {
 				$this->inscription_model->ajouter_inscription();
-				redirect(inscriptions);
+				redirect(acceuil);
 			}
 		}
 		public function delete($id) {   
@@ -58,22 +64,8 @@
 			$this->inscription_model->delete_inscription($id);
 			redirect_back();
 		}
-		
-		public function modifier($id){
-			if(!$this->session->userdata('logged_in')){
-				redirect('users/login');
-			}
-			$query = $this->db->get_where('inscriptions',array('id'=> $id));
-			$data['inscription'] = $query->row_array();
-			$d= array(
-				'title' => "modifier inscription",
-				'inscription' => $this->inscription_model->afficher_inscriptions(),
-			);
-			$this->load->view('templates/header',$d);
-			$this->load->view('vaccination/modifier_inscription',$data);
-		}
 
-		public function valider(){
+		public function update(){
 			if(!$this->session->userdata('logged_in')){
 				redirect('users/login');
 			}
@@ -99,7 +91,7 @@
 				redirect_back();
 			} else {
 				$this->inscription_model->update_inscription();
-				redirect(inscriptions);
+				redirect(inscription);
 			}
 		}
     }

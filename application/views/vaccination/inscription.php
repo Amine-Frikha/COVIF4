@@ -11,12 +11,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Societes</h1>
+            <h1>Inscription</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Acceuil</a></li>
-              <li class="breadcrumb-item active">societes</li>
+              <li class="breadcrumb-item active">Inscription</li>
             </ol>
           </div>
         </div>
@@ -30,14 +30,15 @@
           <div class="col-12">
             <div class="card card-info">
               <div class="card-header">
-                <h3 class="card-title">Ajouter Une Societe</h3>
+                <h3 class="card-title">Questionnaire</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <?php echo form_open('inscription/ajouter') ?>
+                <?php echo form_open('inscription/ajouter ') ?>
                   <div class="row">
                     <div class="col-md-6">
                       <!-- text input -->
+                      <input type="hidden" class="form-control" name="id" value="<?php echo $id; ?>">  
                       <div class="form-group">
                         <label>Numero de telephone:</label>
                         <input type="text" class="form-control" name="numero" placeholder="Entrer ..">
