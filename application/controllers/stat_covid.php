@@ -4,9 +4,12 @@
 			if(!$this->session->userdata('logged_in')){
 				redirect('users/login');
 			}
-			$data['title'] = 'Statistiques COVID-19';
-			$this->load->view('templates/header',$data);
-			$this->load->view('covid-19/stat_covid',$data);
+			$d= array(
+				'type' => $this->session->userdata('type'),
+				'title' => "Statistiques COVID-19",
+			);
+			$this->load->view('templates/header',$d);
+			$this->load->view('covid-19/stat_covid',$d);
 			$this->load->view('templates/footer');
 		}
     }

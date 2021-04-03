@@ -7,9 +7,12 @@
 			if(!file_exists(APPPATH.'views/pages/'.$page.'.php')){
 				show_404();
 			}
-			$data['title'] = 'COVIF4';
-			$this->load->view('templates/header',$data);
-			$this->load->view('pages/'.$page,$data);
+			$d= array(
+				'type' => $this->session->userdata('type'),
+				'title' => "COVIF4",
+			);
+			$this->load->view('templates/header',$d);
+			$this->load->view('pages/'.$page,$d);
 			$this->load->view('templates/footer');
 		}
 	}

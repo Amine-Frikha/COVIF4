@@ -6,8 +6,8 @@
 			}
 			$data['user'] = $this->user_model->afficher_users();
 			$d= array(
+				'type' => $this->session->userdata('type'),
 				'title' => "Utilisateurs",
-				'section' => $this->section_model->afficher_sections(),
 			);
 			$this->load->view('pages/header',$d);
 			$this->load->view('users/users',$data);
@@ -52,7 +52,6 @@
 			$data['user'] = $query->row_array();
 			$d= array(
 				'title' => "modifier utilisateur",
-				'section' => $this->section_model->afficher_sections(),
 			);
 			$this->load->view('pages/header',$d);
 			$this->load->view('users/modifier_user',$data);

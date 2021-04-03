@@ -6,6 +6,7 @@
 			}
 			$id=$this->session->userdata('id');
 			$d= array(
+				'type' => $this->session->userdata('type'),
 				'title' => "inscription",
 			);
 			$query = $this->db->get_where('inscriptions',array('id'=> $id));

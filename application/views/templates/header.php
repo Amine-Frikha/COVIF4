@@ -101,6 +101,20 @@
                 </p>
               </a>
             </li>
+            <?php if ($type=='admin') {
+              echo
+                '<li class="nav-item">
+                  <a href="./gestion" class="nav-link' ;
+                  if ($title=='gestion') echo 'active';
+                  echo'">
+                    <i class="nav-icon fas fa-notes-medical"></i>
+                    <p>
+                      Gestion
+                    </p>
+                  </a>
+                </li>';
+              } 
+            ?>
             <li class="nav-item menu-open">
             <a href="#" class="nav-link <?php if ($title=='Statistiques COVID-19') {echo 'active';} ?>">
               <i class="nav-icon fas fa-chart-pie"></i>
