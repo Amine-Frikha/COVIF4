@@ -1,9 +1,3 @@
-<?php 
-$jsonDataTunisia=file_get_contents("https://api.covid19api.com/live/country/Tunisia/status/confirmed");
-$dataTunisia=json_decode($jsonDataTunisia,true);
-$jsonDataWorld=file_get_contents("https://api.covid19api.com/world/total");
-$dataWorld=json_decode($jsonDataWorld,true);
-?> 
  <!-- Content Wrapper. Contains page content -->
  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -21,30 +15,6 @@ $dataWorld=json_decode($jsonDataWorld,true);
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <!-- Info boxes -->
-        <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Vous êtes abonné avec succès!</h3>
-
-          <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fas fa-minus"></i>
-            </button>
-            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-        </div>
-        <div class="card-body">
-        Vous recevrez une notification dès que ce sera à 
-        votre tour d'être vacciné.
-        </div>
-        <!-- /.card-body -->
-        <div class="card-footer">
-        Vous êtes libre de consulter les fonctionnalités de notre application ci-dessous.
-        </div>
-        <!-- /.card-footer-->
-      </div>
         <div class="row">
           <div class="col-4">
           <div class="small-box bg-info">

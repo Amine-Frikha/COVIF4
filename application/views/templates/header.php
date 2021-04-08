@@ -131,7 +131,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./vaccin" class="nav-link">
+                <a href="./stat_vaccin" class="nav-link <?php if ($title=='Statistiques Du Vaccin') {echo 'active';} ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Vaccin</p>
                 </a>
