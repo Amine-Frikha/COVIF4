@@ -1,6 +1,8 @@
 <?php 
 $jsonDataTunisia=file_get_contents("https://api.covid19api.com/live/country/Tunisia/status/confirmed");
 $dataTunisia=json_decode($jsonDataTunisia,true);
+$jsonDataTunisiaVacc=file_get_contents("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/latest/owid-covid-latest.json");
+$dataTunisiaVacc=json_decode($jsonDataTunisiaVacc,true);
 $jsonDataWorld=file_get_contents("https://api.covid19api.com/world/total");
 $dataWorld=json_decode($jsonDataWorld,true);
 ?> 
@@ -99,12 +101,18 @@ $dataWorld=json_decode($jsonDataWorld,true);
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
+                  <?php
+                    foreach($dataTunisiaVacc as $key => $val) {
+                      ?>
+                     <?php if ($key == 'TUN') { ?>
                   <tr>
                     <th>Date</th>
-                    <th>Cas Confirmés</th>
-                    <th>Décès</th>
+                    <th>Cas Confirmés (+ <?php echo $val['new_cases'] ?>)</th>
+                    <th>Décès (+ <?php echo $val['new_deaths'] ?>)</th>
                     <th>Cas Récupérés</th>
                   </tr>
+                  <?php } ?>
+                  <?php } ?> 
                   </thead>
                   <tbody>
                      <?php
