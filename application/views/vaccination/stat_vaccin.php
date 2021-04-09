@@ -89,8 +89,7 @@ $dataTunisiaVacc=json_decode($jsonDataTunisiaVacc,true);
           <!-- /.col -->
         </div>
         <!-- /.row -->
-    </div>
-                      </br>
+        </br>
     <div class="row">
           <div class="col-4">
           <div class="info-box bg-gradient-warning">
@@ -159,7 +158,7 @@ $dataTunisiaVacc=json_decode($jsonDataTunisiaVacc,true);
 
           <!-- /.col -->
         </div>
-
-    </section>
+    </div>
     <?php } ?>
     <?php } ?> 
+    </section>
