@@ -3,9 +3,12 @@
 		public function __construct(){
 			$this->load->database();
         }
-        public function afficher_inscriptions(){
-            $this->db->order_by('id','DESC');
-			$query = $this->db->get('inscriptions');
+        public function get_inscriptions(){
+            $this->db->select('*');
+            $this->db->from('inscriptions');
+            $this->db->join('users', 'users.id = inscriptions.id');
+            $this->db->join('rendez_vous', 'rendez_vous.id = inscriptions.id');
+			$query = $this->db->get();
 			return $query->result_array();
         }
         
@@ -32,7 +35,11 @@
                 'personnel_sante' => $this->input->post('personnel_sante'),
                 
             );
+            $data_r = array(
+                'id' => $this->input->post('id'),
+            );
             $this->db->insert('inscriptions', $data);
+            $this->db->insert('rendez_vous', $data_r);
         }
         
         public function delete_inscription($id) {
