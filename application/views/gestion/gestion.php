@@ -36,7 +36,7 @@
                     <th>CIN</th>
                     <th>Prenom</th>
                     <th>Nom</th>
-                    <th>Priorité éstimée</th>
+                    <th>Priorité éstimé</th>
                     <th></th>
                   </tr>
                   </thead>
@@ -46,13 +46,10 @@
                     <td><?php echo $s['CIN']; ?></td>
                     <td><?php echo $s['prenom']; ?></td>
                     <td><?php echo $s['nom']; ?></td>
-                    <td><?php echo $s['personnel_sante']*10+$s['immunosepresseur']*10; ?></td>
+                    <td><?php echo $s['rank']; ?></td>
                     <td>
                       <center>
                         <button type="button" class="ion-android-delete" title="supprimer" data-toggle="modal" data-target="#modal<?php echo $s['id'];?>"> </button>
-                        <button type="button" class="ion-android-create" title="modifier" onclick="location.href='<?php echo site_url();?>societes/modifier/<?php echo $s['id'];?>'"> </button>
-                        <button type="button" class="ion-ios-paper" title="declarations" onclick="location.href='<?php echo site_url();?>declarations/affiche/<?php echo $s['id'];?>'"> </button>
-                        <button type="button" class="ion-ios-plus" title="ajouter une declaration" onclick="location.href='<?php echo site_url();?>declarations/ajouter/<?php echo $s['id'];?>'"> </button>
                       </center>
                     </td>
                     <div class="modal fade" id="modal<?php echo $s['id'];?>">

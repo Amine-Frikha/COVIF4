@@ -42,10 +42,10 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="./contact" class="nav-link">Contactez-Nous</a>
+        <a href="<?PHP ECHO BASE_URL(); ?>contact" class="nav-link">Contactez-Nous</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="./faq" class="nav-link">Questions Fréquemment Posées</a>
+        <a href="<?PHP ECHO BASE_URL(); ?>faq" class="nav-link">Questions Fréquemment Posées</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
@@ -60,7 +60,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="./acceuil" class="brand-link">
+    <a href="<?PHP ECHO BASE_URL(); ?>acceuil" class="brand-link">
       <img src="<?php echo base_url(); ?>assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">COV<strong>IF4</strong></span>
     </a>
@@ -86,7 +86,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-              <a href="./acceuil" class="nav-link <?php if ($title=='COVIF4') {echo 'active';} ?>">
+              <a href="<?PHP ECHO BASE_URL(); ?>acceuil" class="nav-link <?php if ($title=='COVIF4') {echo 'active';} ?>">
                 <i class="nav-icon fas fa-home"></i>
                 <p>
                   Acceuil
@@ -94,7 +94,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="./inscription" class="nav-link <?php if ($title=='inscription') {echo 'active';} ?>">
+              <a href="<?PHP ECHO BASE_URL(); ?>inscription" class="nav-link <?php if ($title=='inscription') {echo 'active';} ?>">
                 <i class="nav-icon fas fa-syringe"></i>
                 <p>
                   Inscription vaccin
@@ -102,38 +102,59 @@
               </a>
             </li>
             <?php if ($type=='admin'){ ?>
+              <li class="nav-item menu<?php if ($title=='liste complete'||$title=='Non vaccinés'||$title=='Vaccinés une fois') {echo '-open';} ?>">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-notes-medical"></i>
+                  <p>
+                    Gestion
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="<?PHP ECHO BASE_URL(); ?>gestion" class="nav-link <?php if ($title=='liste complete') {echo 'active';} ?>">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Liste complete</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?PHP ECHO BASE_URL(); ?>gestion/non_vaccines" class="nav-link <?php if ($title=='Non vaccinés') {echo 'active';} ?>">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Non vaccinés</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?PHP ECHO BASE_URL(); ?>gestion/vaccines_1_fois" class="nav-link <?php if ($title=='Vaccinés une fois') {echo 'active';} ?>">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Vaccinés une fois</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            <?php };?>
+            <li class="nav-item menu<?php if ($title=='Statistiques COVID-19'||$title=='Statistiques Du Vaccin') {echo '-open';} ?>">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-chart-pie"></i>
+                <p>
+                  Statistiques
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="./gestion" class="nav-link <?php if ($title=='gestion') echo 'active';?> ">
-                    <i class="nav-icon fas fa-notes-medical"></i>
-                    <p>
-                      Gestion
-                    </p>
+                  <a href="<?PHP ECHO BASE_URL(); ?>stat_covid" class="nav-link <?php if ($title=='Statistiques COVID-19') {echo 'active';} ?>">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>COVID-19</p>
                   </a>
                 </li>
-            <?php };?>
-            <li class="nav-item menu-open">
-            <a href="#" class="nav-link <?php if ($title=='Statistiques COVID-19') {echo 'active';} ?>">
-              <i class="nav-icon fas fa-chart-pie"></i>
-              <p>
-                Statistiques
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="./stat_covid" class="nav-link <?php if ($title=='Statistiques COVID-19') {echo 'active';} ?>">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>COVID-19</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./stat_vaccin" class="nav-link <?php if ($title=='Statistiques Du Vaccin') {echo 'active';} ?>">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Vaccin</p>
-                </a>
-              </li>
-            </ul>
-          </li>
+                <li class="nav-item">
+                  <a href="<?PHP ECHO BASE_URL(); ?>stat_vaccin" class="nav-link <?php if ($title=='Statistiques Du Vaccin') {echo 'active';} ?>">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Vaccin</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
   </aside>
 
  

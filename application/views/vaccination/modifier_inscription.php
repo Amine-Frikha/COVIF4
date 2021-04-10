@@ -51,8 +51,8 @@
                       </div>	
                       <div class="form-group">
                         <label>Lieu de vaccination(Délégation):</label>
-                        <input type="text" class="form-control" name="delegation" placeholder="Entrer .." value="<?php echo $inscription['delegation']; ?>">
-                        <?php echo form_error('delegation'); ?>
+                        <input type="text" class="form-control" name="age" placeholder="Entrer .." value="<?php echo $inscription['age']; ?>">
+                        <?php echo form_error('age'); ?>
                       </div>
                       <div class="form-group">  
                         <label>Genre:</label><br/>
