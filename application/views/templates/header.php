@@ -103,7 +103,7 @@
             </li>
             <?php if ($type=='admin'){ ?>
               <li class="nav-item menu<?php if ($title=='liste complete'||$title=='Non vaccinés'||$title=='Vaccinés une fois') {echo '-open';} ?>">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link <?php if ($title=='liste complete'||$title=='Non vaccinés'||$title=='Vaccinés une fois') {echo 'active';} ?>">
                   <i class="nav-icon fas fa-notes-medical"></i>
                   <p>
                     Gestion
@@ -133,7 +133,7 @@
               </li>
             <?php };?>
             <li class="nav-item menu<?php if ($title=='Statistiques COVID-19'||$title=='Statistiques Du Vaccin') {echo '-open';} ?>">
-              <a href="#" class="nav-link">
+              <a href="#" class="nav-link <?php if ($title=='Statistiques COVID-19'||$title=='Statistiques Du Vaccin') {echo 'active';} ?>">
                 <i class="nav-icon fas fa-chart-pie"></i>
                 <p>
                   Statistiques
