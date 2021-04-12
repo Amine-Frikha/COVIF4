@@ -28,7 +28,7 @@
 				$this->load->view('templates/footer');
 			}
 		}
-
+		
 		public function ajouter(){
 			if(!$this->session->userdata('logged_in')){
 				redirect('users/login');
@@ -39,7 +39,7 @@
 			$this->form_validation->set_rules('numero', 'numero', 'required|exact_length[8]|numeric');
 			$this->form_validation->set_rules('genre', 'genre', 'required');
 			$this->form_validation->set_rules('gouvernerat', 'gouvernerat', 'required');
-			$this->form_validation->set_rules('delegation', 'delegation', 'required');
+			$this->form_validation->set_rules('date_of_birth', 'date_of_birth', 'required');
 			$this->form_validation->set_rules('atteint', 'atteint', 'required');
 			$this->form_validation->set_rules('diabete', 'diabete', 'required');
 			$this->form_validation->set_rules('hyper_art', 'hyper_art', 'required');
@@ -76,7 +76,7 @@
 			$this->form_validation->set_rules('numero', 'numero', 'required|exact_length[8]|numeric');
 			$this->form_validation->set_rules('genre', 'genre', 'required');
 			$this->form_validation->set_rules('gouvernerat', 'gouvernerat', 'required');
-			$this->form_validation->set_rules('delegation', 'delegation', 'required');
+			$this->form_validation->set_rules('date_of_birth', 'date_of_birth', 'required');
 			$this->form_validation->set_rules('atteint', 'atteint', 'required');
 			$this->form_validation->set_rules('diabete', 'diabete', 'required');
 			$this->form_validation->set_rules('hyper_art', 'hyper_art', 'required');

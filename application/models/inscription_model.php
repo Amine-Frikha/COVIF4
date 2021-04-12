@@ -3,43 +3,6 @@
 		public function __construct(){
 			$this->load->database();
         }
-
-        public function get_inscriptions(){
-            $this->db->select('*,RANK() OVER(ORDER BY 
-            users.id+inscriptions.age 
-            DESC) rank');
-            $this->db->from('inscriptions');
-            $this->db->join('users', 'users.id = inscriptions.id');
-            $this->db->join('rendez_vous', 'rendez_vous.id = inscriptions.id');
-			$query = $this->db->get();
-			return $query->result_array();
-        }
-
-        public function get_inscriptions1(){
-            $this->db->select('*,RANK() OVER(ORDER BY 
-            users.id+inscriptions.age 
-            DESC) rank');
-            $this->db->from('inscriptions');
-            $this->db->join('users', 'users.id = inscriptions.id');
-            $this->db->join('rendez_vous', 'rendez_vous.id = inscriptions.id');
-            $this->db->where('rendez_vous.validation_1',0);
-            $this->db->where('rendez_vous.validation_2',0);
-			$query = $this->db->get();
-			return $query->result_array();
-        }
-
-        public function get_inscriptions2(){
-            $this->db->select('*,RANK() OVER(ORDER BY 
-            users.id+inscriptions.age 
-            DESC) rank');
-            $this->db->from('inscriptions');
-            $this->db->join('users', 'users.id = inscriptions.id');
-            $this->db->join('rendez_vous', 'rendez_vous.id = inscriptions.id');
-            $this->db->where('rendez_vous.validation_1',1);
-            $this->db->where('rendez_vous.validation_2',0);
-			$query = $this->db->get();
-			return $query->result_array();
-        }
         
         public function get_inscriptions_total(){
 			return $this->db->count_all('inscriptions');
@@ -52,7 +15,7 @@
                 'numero' => $this->input->post('numero'),
                 'genre' => $this->input->post('genre'),
                 'gouvernerat' => $this->input->post('gouvernerat'),
-                'age' => $this->input->post('age'),
+                'date_of_birth' => $this->input->post('date_of_birth'),
                 'atteint' => $this->input->post('atteint'),
                 'diabete' => $this->input->post('diabete'),
                 'hyper_art' => $this->input->post('hyper_art'),
@@ -85,7 +48,7 @@
                 'numero' => $this->input->post('numero'),
                 'genre' => $this->input->post('genre'),
                 'gouvernerat' => $this->input->post('gouvernerat'),
-                'age' => $this->input->post('age'),
+                'date_of_birth' => $this->input->post('date_of_birth'),
                 'atteint' => $this->input->post('atteint'),
                 'diabete' => $this->input->post('diabete'),
                 'hyper_art' => $this->input->post('hyper_art'),

@@ -50,9 +50,14 @@
                         <?php echo form_error('gouvernerat'); ?>
                       </div>	
                       <div class="form-group">
-                        <label>Lieu de vaccination(Délégation):</label>
-                        <input type="text" class="form-control" name="age" placeholder="Entrer .." value="<?php echo $inscription['age']; ?>">
-                        <?php echo form_error('age'); ?>
+                        <label>Date de naissance:</label>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                          </div>
+                          <input type="date" class="form-control" name="date_of_birth" value="<?php echo $inscription['date_of_birth']; ?>" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask="" inputmode="numeric">
+                        </div>
+                        <?php echo form_error('date_of_birth'); ?>
                       </div>
                       <div class="form-group">  
                         <label>Genre:</label><br/>

@@ -68,6 +68,25 @@
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
   });
 </script>
+<script src="<?php echo base_url();?>assets/plugins/jquery/jquery.min.js"></script>
+<script src="<?php echo base_url();?>assets/plugins/select2/js/select2.full.min.js"></script>
+<script src="<?php echo base_url();?>assets/plugins/moment/moment.min.js"></script>
+<script src="<?php echo base_url();?>assets/plugins/inputmask/jquery.inputmask.min.js"></script>
+<script src="<?php echo base_url();?>assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<!-- Page specific script -->
+<script>
+  $(function () {
+    //Datemask dd/mm/yyyy
+    $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+    //Datemask2 mm/dd/yyyy
+    $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+    //Money Euro
+    $('[data-mask]').inputmask()
     
+    $("input[data-bootstrap-switch]").each(function(){
+      $(this).bootstrapSwitch('state', $(this).prop('checked'));
+    })
+  })
+</script>
 </body>
 </html>
