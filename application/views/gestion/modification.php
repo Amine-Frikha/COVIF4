@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <br/>
-                <table id="example1" class="table table-bordered table-striped">
+                <table class="table table-bordered table-striped">
                   <thead>
                     <tr>
                         <th style="text-align:center; vertical-align:middle;">atteint de la COVID-19</th>

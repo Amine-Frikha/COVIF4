@@ -57,17 +57,6 @@
 <script src="<?php echo base_url(); ?>assets/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?php echo base_url(); ?>assets/dist/js/pages/dashboard2.js"></script>
-<script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
-      "buttons": ["csv", "pdf", "print", "colvis"],
-      "language": {
-    "url": "//cdn.datatables.net/plug-ins/1.10.24/i18n/French.json"
-  }
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-  });
-</script>
 <script src="<?php echo base_url();?>assets/plugins/jquery/jquery.min.js"></script>
 <script src="<?php echo base_url();?>assets/plugins/select2/js/select2.full.min.js"></script>
 <script src="<?php echo base_url();?>assets/plugins/moment/moment.min.js"></script>
@@ -87,6 +76,32 @@
       $(this).bootstrapSwitch('state', $(this).prop('checked'));
     })
   })
+</script>
+<!-- DataTables  & Plugins -->
+<script src="<?php echo base_url();?>assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url();?>assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="<?php echo base_url();?>assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="<?php echo base_url();?>assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="<?php echo base_url();?>assets/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="<?php echo base_url();?>assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="<?php echo base_url();?>assets/plugins/jszip/jszip.min.js"></script>
+<script src="<?php echo base_url();?>assets/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="<?php echo base_url();?>assets/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="<?php echo base_url();?>assets/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="<?php echo base_url();?>assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="<?php echo base_url();?>assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="<?php echo base_url();?>assets/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="<?php echo base_url();?>assets/dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+  });
 </script>
 </body>
 </html>

@@ -91,7 +91,7 @@
 			$this->form_validation->set_rules('validation_2', 'validation_2');
             
             $this->gestion_model->rendez_vous();
-            redirect(acceuil);
+            redirect('gestion');
 		}
     }
 ?>

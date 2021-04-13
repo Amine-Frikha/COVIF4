@@ -1,21 +1,12 @@
 <?php
 	class users extends CI_Controller{
-        public function affiche(){
-			if(!$this->session->userdata('logged_in')){
-				redirect('users/login');
-			}
-			$data['user'] = $this->user_model->afficher_users();
-			$d= array(
-				'type' => $this->session->userdata('type'),
-				'title' => "Utilisateurs",
-			);
-			$this->load->view('pages/header',$d);
-			$this->load->view('users/users',$data);
-        }
 
         public function delete($id) {   
 			if(!$this->session->userdata('logged_in')){
 				redirect('users/login');
+			}
+            if($this->session->userdata('id')!=$id){
+				redirect('acceuil');
 			}
 			$this->user_model->delete_user($id);
 			redirect_back();

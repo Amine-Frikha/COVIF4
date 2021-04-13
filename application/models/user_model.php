@@ -31,7 +31,11 @@
 
         public function delete_user($id) {   
             $this->db->where('id',$id);
+            $this->db->delete('inscriptions');
+            $this->db->where('id',$id);
             $this->db->delete('users');
+            $this->db->where('id',$id);
+            $this->db->delete('rendez_vous');
         }
 
         public function update_user($enc_password) {

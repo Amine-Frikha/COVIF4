@@ -30,7 +30,7 @@
 <body class="hold-transition login-page" style="background-image: url('<?php echo base_url(); ?>assets/dist/img/stet.jpg'); background-size:cover;">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html">COV<strong>IF4</strong></a>
+    <a>COV<strong>IF4</strong></a>
   </div>
   <!-- /.login-logo -->
   <div class="card">

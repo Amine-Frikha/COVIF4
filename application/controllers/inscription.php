@@ -52,7 +52,7 @@
 			$this->form_validation->set_rules('taille', 'taille', 'required|numeric');
 			$this->form_validation->set_rules('personnel_sante', 'personnel_sante', 'required');
 			if($this->form_validation->run() === FALSE){
-				redirect_back();
+				$this->index();
 			} else {
 				$this->inscription_model->ajouter_inscription();
 				redirect(acceuil);
@@ -89,7 +89,7 @@
 			$this->form_validation->set_rules('taille', 'taille', 'required');
 			$this->form_validation->set_rules('personnel_sante', 'personnel_sante', 'required');
 			if($this->form_validation->run() === FALSE){
-				redirect_back();
+				$this->index();
 			} else {
 				$this->inscription_model->update_inscription();
 				redirect(inscription);
