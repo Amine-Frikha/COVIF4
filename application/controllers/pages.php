@@ -13,6 +13,7 @@
 				$v1=$this->inscription_model->get_validation($id)[0]['validation_1'];
 				$v2=$this->inscription_model->get_validation($id)[0]['validation_2'];
 				$d= array(
+					'id' => $id,
 					'exist' => $exist,
 					'done' => $v2,
 					'queue' => $this->inscription_model->get_rank($id,$v1,$v2),

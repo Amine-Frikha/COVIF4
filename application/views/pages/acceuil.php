@@ -153,25 +153,26 @@
         </div>
         <?php if ($exist){ ?>
           <?php if (!$done){ ?>
-            <div class="row">
-              <div class="col-4">
-                <div class="info-box bg-gradient-info">
-                  <span class="info-box-icon"><i class="fas fa-spinner"></i></span>
+            <?php foreach($queue as $q) : if ($q['id']==$id){ ?>
+              <div class="row">
+                <div class="col-4">
+                  <div class="info-box bg-gradient-info">
+                    <span class="info-box-icon"><i class="fas fa-spinner"></i></span>
+                    <div class="info-box-content">
+                      <span class="info-box-text"><b>Rang estimé dans la file d'attente:</b></span>
+                      <span class="info-box-number"><?php echo $q['rank'].' / '.$total; ?></span>
 
-                  <div class="info-box-content">
-                    <span class="info-box-text"><b>Rang estimé dans la file d'attente:</b></span>
-                    <span class="info-box-number"><?php echo $queue[0]['rank']; ?></span>
-
-                    <div class="progress">
-                      <div class="progress-bar" style="width: <?php echo ($queue[0]['rank']/$total*100 ); ?>%"></div>
+                      <div class="progress">
+                        <div class="progress-bar" style="width: <?php echo (100-($q['rank']-1)/$total*100 ); ?>%"></div>
+                      </div>
+                      <span class="progress-description">
+                      <?php echo round((100-($q['rank']-1)/$total*100 ),2) ; ?>% 
+                      </span>
                     </div>
-                    <span class="progress-description">
-                    <?php echo ($queue[0]['rank']/$total*100 ) ; ?>% 
-                    </span>
                   </div>
                 </div>
               </div>
-            </div>
+            <?php }; endforeach; ?>
           <?php } ?>
         <?php } ?>
       </div>
