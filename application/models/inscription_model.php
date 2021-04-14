@@ -72,11 +72,7 @@
                 'personnel_sante' => $this->input->post('personnel_sante'),
                 
             );
-            $data_r = array(
-                'id' => $this->input->post('id'),
-            );
             $this->db->insert('inscriptions', $data);
-            $this->db->insert('rendez_vous', $data_r);
         }
         
         public function delete_inscription($id) {
