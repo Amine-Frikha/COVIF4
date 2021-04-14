@@ -23,7 +23,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
+                <table id="gestion" class="table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th rowspan="2" style="text-align:center; vertical-align:middle;">Priorité éstimé</th>
