@@ -9,7 +9,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Acceuil</a></li>
-              <li class="breadcrumb-item active">societes</li>
+              <li class="breadcrumb-item active">Gestion</li>
             </ol>
           </div>
         </div>
@@ -46,8 +46,8 @@
                         <?php echo $s['gouvernerat'] ?><br/>
                         <?php echo date("d-m-Y", strtotime($s['date_of_birth'])) ?><br/>
                         <?php echo $s['genre'] ?><br/>
-                        <?php echo $s['taille'] ?><br/>
-                        <?php echo $s['poids'] ?><br/>
+                        <?php echo $s['taille'] ?> cm<br/>
+                        <?php echo $s['poids'] ?> Kg<br/>
                     </div>
                 </div>
                 <br/>

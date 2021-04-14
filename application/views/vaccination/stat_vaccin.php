@@ -92,7 +92,7 @@ $dataTunisiaVacc=json_decode($jsonDataTunisiaVacc,true);
         </br>
     <div class="row">
           <div class="col-4">
-          <div class="info-box bg-gradient-warning">
+            <div class="info-box bg-gradient-warning">
               <span class="info-box-icon"><i class="fas fa-hand-holding-medical"></i></span>
 
               <div class="info-box-content">

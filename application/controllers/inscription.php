@@ -39,7 +39,7 @@
 			$this->form_validation->set_rules('numero', 'numero', 'required|exact_length[8]|numeric');
 			$this->form_validation->set_rules('genre', 'genre', 'required');
 			$this->form_validation->set_rules('gouvernerat', 'gouvernerat', 'required');
-			$this->form_validation->set_rules('date_of_birth', 'date_of_birth', 'required');
+			$this->form_validation->set_rules('date_of_birth', 'date de naissance', 'required');
 			$this->form_validation->set_rules('atteint', 'atteint', 'required');
 			$this->form_validation->set_rules('diabete', 'diabete', 'required');
 			$this->form_validation->set_rules('hyper_art', 'hyper_art', 'required');
@@ -55,7 +55,7 @@
 				$this->index();
 			} else {
 				$this->inscription_model->ajouter_inscription();
-				redirect(acceuil);
+				redirect('acceuil');
 			}
 		}
 		public function delete($id) {   
@@ -92,8 +92,17 @@
 				$this->index();
 			} else {
 				$this->inscription_model->update_inscription();
-				redirect(inscription);
+				redirect('inscription');
 			}
+		}
+
+		public function annuler(){
+			if(!$this->session->userdata('logged_in')){
+				redirect('users/login');
+			}
+			$id=$this->session->userdata('id');
+			$this->inscription_model->annuler($id);
+			redirect('acceuil');
 		}
     }
 ?>

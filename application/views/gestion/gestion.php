@@ -9,7 +9,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Acceuil</a></li>
-              <li class="breadcrumb-item active">societes</li>
+              <li class="breadcrumb-item active">Gestion</li>
             </ol>
           </div>
         </div>

@@ -1,13 +1,19 @@
 <?php
 	class gestion_model extends CI_Model{
-		public function __construct(){
-			$this->load->database();
-        }
-
+        
         public function get_inscriptions(){
             $this->db->select('*,RANK() OVER(ORDER BY 
-            users.id
-            DESC) rank');
+            +3*DATEDIFF(date_of_birth,curdate())/365.25
+            -50*atteint
+            +20*hyper_art
+            +20*maladie_renale
+            +20*insuff_cardiaque
+            +40*maladie_respir
+            +50*immunosepresseur
+            +70*personnel_sante 
+            DESC
+            ,inscriptions.id
+            ASC) rank');
             $this->db->from('inscriptions');
             $this->db->join('users', 'users.id = inscriptions.id');
             $this->db->join('rendez_vous', 'rendez_vous.id = inscriptions.id');
@@ -17,8 +23,17 @@
 
         public function get_inscriptions1(){
             $this->db->select('*,RANK() OVER(ORDER BY 
-            users.id
-            DESC) rank');
+            +3*DATEDIFF(date_of_birth,curdate())/365.25
+            -50*atteint
+            +20*hyper_art
+            +20*maladie_renale
+            +20*insuff_cardiaque
+            +40*maladie_respir
+            +50*immunosepresseur
+            +70*personnel_sante 
+            DESC
+            ,inscriptions.id
+            ASC) rank');
             $this->db->from('inscriptions');
             $this->db->join('users', 'users.id = inscriptions.id');
             $this->db->join('rendez_vous', 'rendez_vous.id = inscriptions.id');
@@ -30,8 +45,17 @@
 
         public function get_inscriptions2(){
             $this->db->select('*,RANK() OVER(ORDER BY 
-            users.id
-            DESC) rank');
+            +3*DATEDIFF(date_of_birth,curdate())/365.25
+            -50*atteint
+            +20*hyper_art
+            +20*maladie_renale
+            +20*insuff_cardiaque
+            +40*maladie_respir
+            +50*immunosepresseur
+            +70*personnel_sante 
+            DESC
+            ,inscriptions.id
+            ASC) rank');
             $this->db->from('inscriptions');
             $this->db->join('users', 'users.id = inscriptions.id');
             $this->db->join('rendez_vous', 'rendez_vous.id = inscriptions.id');

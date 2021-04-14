@@ -1,5 +1,6 @@
 <?php
 	class user_model extends CI_Model{
+        
 		public function register($enc_password){
             $data = array(
                 'nom' => $this->input->post('nom'),
@@ -9,10 +10,12 @@
             );
             $this->db->insert('users',$data);
         }
+
         public function check_exists($email){
             $query=$this->db->get_where('users',array('email' => $email));
             return empty($query->row_array());
         }
+        
         public function login($email,$password){
             $this->db->where('email', $email);
             $this->db->where('password', $password);
@@ -38,13 +41,18 @@
             $this->db->delete('rendez_vous');
         }
 
+        public function get_password($id){
+            $q=$this->db->get_where('users',array('id' => $this->input->post('id')));
+            $query = $q->row_array();
+            return($query['password']);
+        }
+
         public function update_user($enc_password) {
             $data = array(
                 'nom' => $this->input->post('nom'),
                 'prenom' => $this->input->post('prenom'),
                 'email' => $this->input->post('email'),
                 'password' => $enc_password,
-                'type' => $this->input->post('type')
             );
             $this->db->where('id',$this->input->post('id'));
             $this->db->update('users', $data);
