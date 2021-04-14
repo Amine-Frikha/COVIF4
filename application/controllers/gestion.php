@@ -93,9 +93,5 @@
             $this->gestion_model->rendez_vous();
             redirect('gestion');
 		}
-
-        public function admin(){
-            
-        }
     }
 ?>
