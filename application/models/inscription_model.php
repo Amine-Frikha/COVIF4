@@ -1,5 +1,6 @@
 <?php
 	class inscription_model extends CI_Model{
+<<<<<<< HEAD
         
         public function get_rank($id,$v1,$v2){
             $this->db->select('*,RANK() OVER(ORDER BY 
@@ -19,6 +20,14 @@
             $this->db->where('rendez_vous.validation_1',$v1);
             $this->db->where('rendez_vous.validation_2',$v2);
 			$query = $this->db->get();
+=======
+		public function __construct(){
+			$this->load->database();
+        }
+        public function afficher_inscriptions(){
+            $this->db->order_by('id','DESC');
+			$query = $this->db->get('inscriptions');
+>>>>>>> parent of d6a38a5 (gestion)
 			return $query->result_array();
         }
 
@@ -72,11 +81,7 @@
                 'personnel_sante' => $this->input->post('personnel_sante'),
                 
             );
-            $data_r = array(
-                'id' => $this->input->post('id'),
-            );
             $this->db->insert('inscriptions', $data);
-            $this->db->insert('rendez_vous', $data_r);
         }
         
         public function delete_inscription($id) {

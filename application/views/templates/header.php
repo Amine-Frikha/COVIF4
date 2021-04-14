@@ -103,6 +103,7 @@
                 </p>
               </a>
             </li>
+<<<<<<< HEAD
             <?php if ($type=='admin'){ ?>
               <li class="nav-item menu<?php if ($title=='liste complete'||$title=='Non vaccinés'||$title=='Vaccinés une fois') {echo '-open';} ?>">
                 <a href="#" class="nav-link <?php if ($title=='liste complete'||$title=='Non vaccinés'||$title=='Vaccinés une fois') {echo 'active';} ?>">
@@ -157,6 +158,45 @@
                 </li>
               </ul>
             </li>
+=======
+            <?php if ($type=='admin') {
+              echo
+                '<li class="nav-item">
+                  <a href="./gestion" class="nav-link' ;
+                  if ($title=='gestion') echo 'active';
+                  echo'">
+                    <i class="nav-icon fas fa-notes-medical"></i>
+                    <p>
+                      Gestion
+                    </p>
+                  </a>
+                </li>';
+              } 
+            ?>
+            <li class="nav-item menu-open">
+            <a href="#" class="nav-link <?php if ($title=='Statistiques COVID-19') {echo 'active';} ?>">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Statistiques
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./stat_covid" class="nav-link <?php if ($title=='Statistiques COVID-19') {echo 'active';} ?>">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>COVID-19</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./vaccin" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Vaccin</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+>>>>>>> parent of d6a38a5 (gestion)
   </aside>
 
  
