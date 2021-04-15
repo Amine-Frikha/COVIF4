@@ -171,6 +171,26 @@
                     </div>
                   </div>
                 </div>
+                <div class="col-4">
+                  <div class="info-box bg-success">
+                    <span class="info-box-icon"><i class="far fa-calendar-alt"></i></span>
+                    <div class="info-box-content">
+                      <span class="info-box-text"><b>Prochain rendez-vous:</b></span>
+                      <span class="info-box-number">
+                        <?php 
+                          if(!$q['validation_1']){
+                            if ($q['date_1']!='0000-00-00') echo date("d/m/Y", strtotime($q['date_1'])); 
+                            else echo "non spécifié";
+                          }
+                          else{
+                            if ($q['date_2']!='0000-00-00') echo date("d/m/Y", strtotime($q['date_1'])); 
+                            else echo "non spécifiée";
+                          }
+                        ?>
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             <?php }; endforeach; ?>
           <?php } ?>
