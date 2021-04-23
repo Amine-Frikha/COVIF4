@@ -116,7 +116,7 @@ $dataTunisiaVacc=json_decode($jsonDataTunisiaVacc,true);
               <span class="info-box-icon"><i class="fas fa-syringe"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text"><b>Personnes Ayant Reçu La Première Dose</b></span>
+                <span class="info-box-text"><b>Personnes Ayant Reçu Au Moins Une Dose</b></span>
                 <span class="info-box-number"><?php echo number_format($val['people_vaccinated']); ?></span>
 
                 <div class="progress">
