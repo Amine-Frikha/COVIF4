@@ -3,7 +3,7 @@
         
         public function get_inscriptions(){
             $this->db->select('*,RANK() OVER(ORDER BY 
-            +3*DATEDIFF(date_of_birth,curdate())/365.25
+            +3*DATEDIFF(curdate(),date_of_birth)/365.25
             -50*atteint
             +20*hyper_art
             +20*maladie_renale
@@ -23,7 +23,7 @@
 
         public function get_inscriptions1(){
             $this->db->select('*,RANK() OVER(ORDER BY 
-            +3*DATEDIFF(date_of_birth,curdate())/365.25
+            +3*DATEDIFF(curdate(),date_of_birth)/365.25
             -50*atteint
             +20*hyper_art
             +20*maladie_renale
@@ -45,7 +45,7 @@
 
         public function get_inscriptions2(){
             $this->db->select('*,RANK() OVER(ORDER BY 
-            +3*DATEDIFF(date_of_birth,curdate())/365.25
+            +3*DATEDIFF(curdate(),date_of_birth)/365.25
             -50*atteint
             +20*hyper_art
             +20*maladie_renale
