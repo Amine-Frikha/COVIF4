@@ -24,13 +24,15 @@
                     <a class="d-block w-100" data-toggle="collapse" href="#collapseOne">
                         <div class="card-header">
                             <h4 class="card-title w-100">
-                                1. Lorem ipsum dolor sit amet
+                            Quels sont les grands principes de la stratégie de vaccination contre la COVID-19 ?
                             </h4>
                         </div>
                     </a>
                     <div id="collapseOne" class="collapse show" data-parent="#accordion">
                         <div class="card-body">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        *La Tunisie s’est fixé les principes suivants :
+un accès équitable pour des vaccins gratuits, efficaces, sûrs et de qualité approuvés par les données scientifiques en temps opportun
+</br>*une prise de décision personnelle basée sur des données transparentes et compréhensibles
                         </div>
                     </div>
                 </div>
@@ -38,13 +40,13 @@
                     <a class="d-block w-100" data-toggle="collapse" href="#collapseTwo">
                         <div class="card-header">
                             <h4 class="card-title w-100">
-                                2. Aenean massa
+                            Comment s’enregistrer pour la vaccination Covid-19 ?
                             </h4>
                         </div>
                     </a>
                     <div id="collapseTwo" class="collapse" data-parent="#accordion">
                         <div class="card-body">
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            Il suffit de remplir vos données dans le formulaire de notre site 
                         </div>
                     </div>
                 </div>
@@ -52,13 +54,15 @@
                     <a class="d-block w-100" data-toggle="collapse" href="#collapseThree">
                         <div class="card-header">
                             <h4 class="card-title w-100">
-                                3. Donec quam felis
+                            Quels sont les objectifs de la vaccination ?
                             </h4>
                         </div>
                     </a>
                     <div id="collapseThree" class="collapse" data-parent="#accordion">
                         <div class="card-body">
-                            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                        Le premier objectif de la vaccination, c’est de faire baisser le nombre des formes graves de COVID-19. 
+                        Les résultats des études cliniques des candidats vaccins semblent converger pour démontrer un fait principal : 
+                        la vaccination permet de réduire massivement la mortalité due au virus et à ses formes graves.
                         </div>
                     </div>
                 </div>
@@ -66,13 +70,13 @@
                     <a class="d-block w-100" data-toggle="collapse" href="#collapseFour">
                         <div class="card-header">
                             <h4 class="card-title w-100">
-                                4. Donec pede justo
+                            La vaccination contre la Covid-19 sera-t-elle gratuite ?
                             </h4>
                         </div>
                     </a>
                     <div id="collapseFour" class="collapse" data-parent="#accordion">
                         <div class="card-body">
-                            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+                        Oui. La vaccination sera gratuite pour tous en Tunisie, mais selon la priorité établie par l es autorités.
                         </div>
                     </div>
                 </div>
@@ -80,13 +84,15 @@
                     <a class="d-block w-100" data-toggle="collapse" href="#collapseFive">
                         <div class="card-header">
                             <h4 class="card-title w-100">
-                                5. In enim justo
+                            Où se faire vacciner ?
                             </h4>
                         </div>
                     </a>
                     <div id="collapseFive" class="collapse" data-parent="#accordion">
                         <div class="card-body">
-                            In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                        Il y aura environ 200 centres de vaccination à raison de :
+1 à 2 grand (s) centre(s) par gouvernorat ouvert toute la semaine
+Et un centre par délégation à identifier par direction régionale de la santé ouvert le weekend
                         </div>
                     </div>
                 </div>
@@ -94,55 +100,14 @@
                     <a class="d-block w-100" data-toggle="collapse" href="#collapseSix">
                         <div class="card-header">
                             <h4 class="card-title w-100">
-                                6. Integer tincidunt
+                            Que faire en cas de problème lors de l'inscription?
                             </h4>
                         </div>
                     </a>
                     <div id="collapseSix" class="collapse" data-parent="#accordion">
                         <div class="card-body">
-                            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-                        </div>
-                    </div>
-                </div>
-                <div class="card card-danger card-outline">
-                    <a class="d-block w-100" data-toggle="collapse" href="#collapseSeven">
-                        <div class="card-header">
-                            <h4 class="card-title w-100">
-                                7. Aenean leo ligula
-                            </h4>
-                        </div>
-                    </a>
-                    <div id="collapseSeven" class="collapse" data-parent="#accordion">
-                        <div class="card-body">
-                            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                        </div>
-                    </div>
-                </div>
-                <div class="card card-danger card-outline">
-                    <a class="d-block w-100" data-toggle="collapse" href="#collapseEight">
-                        <div class="card-header">
-                            <h4 class="card-title w-100">
-                                8. Aliquam lorem ante
-                            </h4>
-                        </div>
-                    </a>
-                    <div id="collapseEight" class="collapse" data-parent="#accordion">
-                        <div class="card-body">
-                            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
-                        </div>
-                    </div>
-                </div>
-                <div class="card card-danger card-outline">
-                    <a class="d-block w-100" data-toggle="collapse" href="#collapseNine">
-                        <div class="card-header">
-                            <h4 class="card-title w-100">
-                                9.  Quisque rutrum
-                            </h4>
-                        </div>
-                    </a>
-                    <div id="collapseNine" class="collapse" data-parent="#accordion">
-                        <div class="card-body">
-                            Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+                        Un numéro vert gratuit a été mis en place pour accompagner les citoyens tout au long de la campagne de vaccination. 
+                        Le numéro vert : 80102021, ouvert du lundi au vendredi de 09h à 17h
                         </div>
                     </div>
                 </div>
