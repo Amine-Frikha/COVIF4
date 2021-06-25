@@ -26,7 +26,7 @@
               <div class="icon">
               <i class="fas fa-chart-bar"></i>
               </div>
-              <a href="<?php echo base_url(); ?>/stat_covid" class="small-box-footer">
+              <a href="<?php echo base_url(); ?>stat_covid" class="small-box-footer">
               Accéder <i class="fas fa-arrow-circle-right"></i>
               </a>
             </div>
@@ -43,7 +43,7 @@
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
               </div>
-              <a href="<?php echo base_url(); ?>/vaccin" class="small-box-footer">
+              <a href="<?php echo base_url(); ?>stat_vaccin" class="small-box-footer">
               Accéder <i class="fas fa-arrow-circle-right"></i>
               </a>
             </div>
@@ -64,7 +64,7 @@
               <div class="icon">
                 <i class="fas fa-user-plus"></i>
               </div>
-              <a href="<?php echo base_url(); ?>/users/modifier_user" class="small-box-footer">
+              <a href="<?php echo base_url(); ?>users/modifier_user" class="small-box-footer">
               Accéder <i class="fas fa-arrow-circle-right"></i>
               </a>
             </div>
@@ -86,7 +86,7 @@
               <div class="icon">
               <i class="fas fa-question"></i>
               </div>
-              <a href="<?php echo base_url(); ?>/stat_covid" class="small-box-footer">
+              <a href="<?php echo base_url(); ?>stat_covid" class="small-box-footer">
               Accéder <i class="fas fa-arrow-circle-right"></i>
               </a>
             </div>
@@ -103,7 +103,7 @@
               <div class="icon">
               <i class="fas fa-hands-helping"></i>
               </div>
-              <a href="<?php echo base_url(); ?>/contact" class="small-box-footer">
+              <a href="<?php echo base_url(); ?>contact" class="small-box-footer">
               Contactez-nous <i class="fas fa-arrow-circle-right"></i>
               </a>
             </div>

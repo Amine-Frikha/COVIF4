@@ -27,7 +27,7 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
-<body class="hold-transition register-page" style="background-image: url('<?php echo base_url(); ?>assets/dist/img/sky.jpg'); background-size:cover;">
+<body class="hold-transition register-page" style="background-image: url('<?php echo base_url(); ?>assets/dist/img/stet.jpg'); background-size:cover;">
 <div class="register-box">
   <div class="register-logo">
     <a href="../../index2.html"><b>COV</b>IF4</a>
