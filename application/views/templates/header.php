@@ -79,7 +79,7 @@
             $nom = $this->session->userdata('nom');
             $prenom = $this->session->userdata('prenom');   
           ?>
-          <a href="#" class="d-block"><?php echo $nom.' '.$prenom;?></a>
+          <a href="<?php echo base_url(); ?>/users/modifier_user" class="d-block"><?php echo $nom.' '.$prenom;?></a>
         </div>
       </div>
       <!-- Sidebar Menu -->
