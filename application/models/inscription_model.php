@@ -72,12 +72,15 @@
                 'personnel_sante' => $this->input->post('personnel_sante'),
                 
             );
+            $data2['id'] = $this->input->post('id');
             $this->db->insert('inscriptions', $data);
+            $this->db->insert('rendez_vous',$data2);
         }
         
         public function delete_inscription($id) {
             $this->db->where('id',$id);
             $this->db->delete('inscriptions');
+            $this->db->delete('rendez_vous');
         }
 
         public function update_inscription() {

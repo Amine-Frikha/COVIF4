@@ -76,10 +76,10 @@
         </div>
         <div class="info">
           <?php 
-            $nom = $this->session->userdata('nom');
-            $prenom = $this->session->userdata('prenom');   
+            $prenom = $this->session->userdata('prenom'); 
+            $nom = $this->session->userdata('nom');  
           ?>
-          <a href="<?php echo base_url(); ?>/users/modifier_user" class="d-block"><?php echo $nom.' '.$prenom;?></a>
+          <a href="<?php echo base_url(); ?>/users/modifier_user" class="d-block"><?php echo $prenom.' '.$nom;?></a>
         </div>
       </div>
       <!-- Sidebar Menu -->
